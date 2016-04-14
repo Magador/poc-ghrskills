@@ -1,6 +1,4 @@
 var gulp = require('gulp');
-var serve = require('gulp-serve');
-var open = require('gulp-open');
 var browserSync = require('browser-sync');
 var historyApiFallback = require('connect-history-api-fallback');
 var reload = browserSync.reload;

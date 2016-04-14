@@ -9,10 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.11.2",
+    "browser-sync": "^2.12.3",
     "connect-history-api-fallback": "^1.2.0",
-    "gulp": "^3.9.1",
-    "gulp-open": "^1.0.0",
-    "gulp-serve": "^1.2.0"
+    "gulp": "^3.9.1"
   }
 }
