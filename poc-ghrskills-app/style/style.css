@@ -62,7 +62,7 @@ md-card-content.notification-content {
 
 .md-button.notification-button {
   margin: 0;
-  text-transform: initial;
+  text-transform: none;
   width: 100%;
   text-align: left;
 }
