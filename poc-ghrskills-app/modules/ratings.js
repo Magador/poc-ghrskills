@@ -36,8 +36,12 @@ define([
         scope.innerOffset = 81.68;
         scope.outerOffset = 113.1;
         
-        if(iAttrs.innerCircle == undefined)
-          iElement.children()[2].remove()
+        if(iAttrs.innerCircle == undefined) {
+          $log.info(iElement, iElement.children());
+          var child = iElement.children()[2];
+          if(child)
+            child.remove();
+        }
 
         scope.$watch(function() {
           return scope.ratings;
