@@ -1,0 +1,12 @@
+{
+  "application.view.poc-ghrskills-app.home": "Home",
+  "application.view.poc-ghrskills-app.home.title": "Homepage",
+  "application.view.poc-ghrskills-app.team": "Team",
+  "application.view.poc-ghrskills-app.team.title": "Team overview",
+  "application.view.poc-ghrskills-app.people.:personId": "Personal infos",
+  "application.view.poc-ghrskills-app.people.:personId.title": "Personal informations",
+  "application.view.poc-ghrskills-app.skills.:skillId": "Skills",
+  "application.view.poc-ghrskills-app.skills.:skillId.title": "Skill overview",
+  "application.view.poc-ghrskills-app.cart": "Cart",
+  "application.view.poc-ghrskills-app.cart.title": "Cart overview"
+}

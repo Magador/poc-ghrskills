@@ -1,0 +1,94 @@
+{
+  "id": "poc-ghrskills-app",
+  "name": "Proof of Concept GHRSkills",
+  "home": "/home",
+
+  "modules": {
+    "home": {
+      "path": "{poc-ghrskills-app}/modules/home",
+      "autoload": true
+    },
+    "team": {
+      "path": "{poc-ghrskills-app}/modules/team",
+      "autoload": true
+    },
+    "people": {
+      "path": "{poc-ghrskills-app}/modules/people",
+      "autoload": true
+    },
+    "skills": {
+      "path": "{poc-ghrskills-app}/modules/skills",
+      "autoload": true
+    },
+    "cart": {
+      "path": "{poc-ghrskills-app}/modules/cart",
+      "autoload": true
+    },
+    "ratings": {
+      "path": "{poc-ghrskills-app}/modules/ratings",
+      "autoload": true
+    },
+    "style": {
+      "path": "[css]!{poc-ghrskills-app}/style/style.css",
+      "autoload": true
+    }
+  },
+  "i18n": {
+    "en": ["{poc-ghrskills-app}/i18n/messages-en.json"],
+    "fr": ["{poc-ghrskills-app}/i18n/messages-fr.json"]
+  },
+  "routes": {
+    "/home": {
+      "templateUrl": "{poc-ghrskills-app}/views/home.html",
+      "controller": "HomeController",
+      "hidden": false,
+      "icon": "home",
+      "search": {
+        "disabled": true
+      }
+    },
+    "/team": {
+      "templateUrl": "{poc-ghrskills-app}/views/team.html",
+      "controller": "TeamController",
+      "hidden": false,
+      "icon": "group_work",
+      "search": {
+        "disabled": true
+      }
+    },
+    "/people/:personId": {
+      "templateUrl": "{poc-ghrskills-app}/views/people.html",
+      "controller": "PeopleController",
+      "hidden": false,
+      "icon": "person",
+      "search": {
+        "disabled": true
+      }
+    },
+    "/skills/:skillId": {
+      "templateUrl": "{poc-ghrskills-app}/views/skills.html",
+      "controller": "SkillsController",
+      "hidden": true,
+      "search": {
+        "disabled": true
+      }
+    },
+    "/cart": {
+      "templateUrl": "{poc-ghrskills-app}/views/cart.html",
+      "controller": "CartController",
+      "hidden": false,
+      "icon": "shopping_cart",
+      "search": {
+        "disabled": true
+      }
+    }
+  },
+  "requireConfig": {
+    "paths": {
+      "{angular-messages}": "bower_components/angular-messages"
+    },
+    "shim": {
+      "{angular-messages}/angular-messages": ["{angular}/angular"]
+    }
+  }
+}

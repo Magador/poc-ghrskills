@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-w20-app>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>W20 Material Theme Test</title>
+  <script type="text/javascript" data-main="bower_components/w20/modules/w20" src="bower_components/requirejs/require.js"></script>
+</head>
+<body layout ng-cloak md-swipe-left="swipe.left()" md-swipe-right="swipe.right()">
+  <div id="w20-loading-cloak">
+    <div class="w20-loading-indicator"></div>
+  </div>
+  <w20-material-sidenav></w20-material-sidenav>
+  <main layout="column" flex>
+    <w20-material-topbar search-placeholder="search.placeholder" search-disabled="search.disabled"></w20-material-topbar>
+    <md-content ng-view flex></md-content>
+  </main>
+  <div data-w20-error-report></div>
+  <span id="browser-sync-binding"></span>
+</body>
+</html>

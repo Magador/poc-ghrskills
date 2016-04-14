@@ -1,0 +1,96 @@
+<section class="people-view" flex>
+  <div flex="none" layout="column" layout-gt-xs="row" layout-align="space-around stretch">
+    <div flex flex-gt-xs="66">
+      <md-card flex>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Pierre Lefevre</span>
+            <span class="md-subhead">Resp Réduction des coûts garanties et services</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media">
+              <img ng-src="https://randomuser.me/api/portraits/men/15.jpg">
+            </div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-content layout="column" flex class="people-details">
+          <dl class="details-infos">
+            <dt class="infos-title md-body-2">Direction / entité</dt>
+            <dd class="infos-description md-body-1">DF/DSP/DPAV/PGAS/PAGC</dd>
+            <dt class="infos-title md-body-2">Fonction</dt>
+            <dd class="infos-description md-body-1">Animateur Garantie</dd>
+            <dt class="infos-title md-body-2">Filière</dt>
+            <dd class="infos-description md-body-1">Maintenance et contrats de service</dd>
+            <dt class="infos-title md-body-2">Manager N+1</dt>
+            <dd class="infos-description md-body-1">Dubois Paul</dd>
+            <dt class="infos-title md-body-2">Manager évaluateur</dt>
+            <dd class="infos-description md-body-1">Martin Jacques</dd>
+            <dt class="infos-title md-body-2">Pays</dt>
+            <dd class="infos-description md-body-1">France</dd>
+            <dt class="infos-title md-body-2">Site</dt>
+            <dd class="infos-description md-body-1">Meudon</dd>
+          </dl>
+        </md-card-content>
+        <md-card-actions>
+          <md-button>éditer</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex="100" flex-gt-xs="33" layout="row" layout-gt-xs="column">
+      <md-card flex>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-title">Complétude</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content flex layout="column" layout-align="start center">
+          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
+            <g ghr-skills-ratings ratings="{{completeness.values}}" outer-color="'#1A237E'"></g>
+          </svg>
+          <p class="md-subhead">{{completeness.values[0]}} / 100</p>
+        </md-card-content>
+      </md-card>
+      <md-card flex>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-title">Nb skills, objectifs</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+
+  <div layout="row" layout-wrap flex>
+    <div flex="50" flex-gt-xs="33" ng-repeat="skill in skills">
+      <md-card flex>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-title">{{skill.title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content flex layout="column" layout-align="start center">
+          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
+            <g ghr-skills-ratings ratings="{{skill.values}}" outer-color="'#1A237E'"></g>
+          </svg>
+          <p class="md-subhead">{{skill.value}} / {{skill.max}}</p>
+        </md-card-content>
+        <md-card-actions class="dense-buttons">
+          <md-button class="md-icon-button md-accent" ng-click="go('poc-ghrskills-app/skills/'+$index)">
+            <md-icon>search</md-icon>
+          </md-button>
+          <md-button class="md-icon-button yammer-button" aria-label="export to yammer">
+            <img src="/poc-ghrskills-app/images/y-spittle-blue.png" class="yammer-image"/>
+          </md-button>
+          <md-button class="md-icon-button" ng-click="skill.tooltipVisible = true">
+            <md-tooltip md-direction="top" md-visible="skill.tooltipVisible">
+              47 likes
+            </md-tooltip>
+            <md-icon>share</md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+{
+  "application.view.poc-ghrskills-app.home": "Accueil",
+  "application.view.poc-ghrskills-app.home.title": "HR Smart",
+  "application.view.poc-ghrskills-app.team": "Équipe",
+  "application.view.poc-ghrskills-app.team.title": "Aperçu de l'équipe",
+  "application.view.poc-ghrskills-app.people.:personId": "Infos personnelles",
+  "application.view.poc-ghrskills-app.people.:personId.title": "Informations personnelles",
+  "application.view.poc-ghrskills-app.skills.:skillId": "Compétences",
+  "application.view.poc-ghrskills-app.skills.:skillId.title": "Aperçu de compétence",
+  "application.view.poc-ghrskills-app.cart": "Panier",
+  "application.view.poc-ghrskills-app.cart.title": "Aperçu du panier"
+}

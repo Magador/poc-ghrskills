@@ -1,0 +1,24 @@
+{
+  "name": "w20-material-theme",
+  "license": "CC-BY-SA-4.0",
+  "main": "modules/material-theme.js",
+  "ignore": [
+    "bower_components",
+    "node_modules"
+  ],
+  "dependencies": {
+    "w20-material": "~2.1.4",
+    "w20": "~2.2.2",
+    "roboto-fontface": "0.4.x"
+  },
+  "homepage": "https://github.com/Magador/w20-material-theme",
+  "_release": "a9eecc2378",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a9eecc2378310b49456036b608af3401f0937c53"
+  },
+  "_source": "https://github.com/Magador/w20-material-theme.git",
+  "_target": "*",
+  "_originalSource": "Magador/w20-material-theme"
+}

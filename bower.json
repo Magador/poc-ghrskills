@@ -1,0 +1,27 @@
+{
+  "name": "poc-ghrskills",
+  "version": "0.0.0",
+  "authors": [
+    "Jean-Baptiste Lenglet <jbaptiste.lenglet+git@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "w20-material-theme": "Magador/w20-material-theme",
+    "w20": "~2.2.2",
+    "angular-material": "1.1.0-rc3"
+  },
+  "resolutions": {
+    "angular": "1.5.3"
+  }
+}

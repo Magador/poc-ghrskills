@@ -1,0 +1,60 @@
+<section class="team-view">
+  <md-card>
+    <md-card-content>
+      <md-grid-list md-cols="3" md-row-height="1:1" md-gutter="4px">
+        <md-grid-tile md-colspan="2" md-rowspan="2">
+          <img src="poc-ghrskills-app/images/radar.jpg" width="100%" height="100%">
+        </md-grid-tile>
+        <md-grid-tile md-colspan="1" md-rowspan="1">
+          <div layout="column" layout-align="start stretch" flex>
+            <span class="md-title">Totals skills</span>
+            <span class="md-body-2">34 / 46</span>
+          </div>
+        </md-grid-tile>
+        <md-grid-tile md-colspan="1" md-rowspan="1">
+          <div layout="column" layout-align="start stretch" flex>
+            <span class="md-title">Titre 1</span>
+            <span class="md-body-2">34 / 46</span>
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+  </md-card>
+  <md-card ng-repeat="user in [1, 2, 3, 4, 5]">
+    <md-card-header>
+      <md-card-avatar>
+        <img class="md-user-avatar" ng-src="https://randomuser.me/api/portraits/women/{{user+5}}.jpg" />
+      </md-card-avatar>
+      <md-card-header-text>
+        <span layout="row" layout-align="space-between center">
+          <span class="md-title">Pierre Lefevre</span>
+          <span class="md-title">+33 1 23 45 56 78</span>
+        </span>
+        <span class="md-subhead">Resp Réduction des coûts garanties et services</span>
+      </md-card-header-text>
+    </md-card-header>
+    <md-divider></md-divider>
+    <md-card-content class="people-details" layout="column">
+      <dl class="details-infos">
+        <dt class="infos-title md-body-2">Direction / entité</dt>
+        <dd class="infos-description md-body-1">DF/DSP/DPAV/PGAS/PAGC</dd>
+        <dt class="infos-title md-body-2">Fonction</dt>
+        <dd class="infos-description md-body-1">Animateur Garantie</dd>
+        <dt class="infos-title md-body-2">Filière</dt>
+        <dd class="infos-description md-body-1">Maintenance et contrats de service</dd>
+      </dl>
+    </md-card-content>
+    <md-divider></md-divider>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-primary" ng-click="go(user)">
+        View
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon>edit</md-icon>
+      </md-button>
+      <md-button class="md-icon-button">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+    </md-card-actions>
+  </md-card>
+</section>

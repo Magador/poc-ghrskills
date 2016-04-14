@@ -1,0 +1,89 @@
+<section class="skills-mobile-tablet-view">
+  <md-toolbar class="md-hue-3">
+    <div class="md-toolbar-tools">
+      <span>Fondamentaux de la garantie</span>
+    </div>
+  </md-toolbar>
+  <md-list flex>
+    <md-divider></md-divider>
+    <md-list-item ng-class="{'md-2-line': micro.description}" ng-repeat="micro in microSkills" ng-click="sidenav.open()">
+      <span class="md-avatar-icon md-avatar-first-letter">{{micro.name[0]}}</span>
+      <div class="md-list-item-text" flex>
+        <p ng-if="!micro.description">{{micro.name}}</p>
+        <h3 class="micro-skill-title" ng-if="micro.description">{{micro.name}}</h3>
+        <p ng-if="micro.description">{{micro.description}}</p>
+      </div>
+      <div class="md-secondary skill-ratings">
+        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
+          <g ghr-skills-ratings inner-circle ratings="{{micro.targets}}" outer-color="'#1A237E'" inner-color="'#5C6BC0'"></g>
+        </svg>
+      </div>
+      <div class="md-secondary skill-ratings">
+        <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
+          <g ghr-skills-ratings ratings="{{micro.rating}}" outer-color="'#00BCD4'"></g>
+        </svg>
+      </div>
+      <md-divider md-inset ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>
+</section>
+
+<md-sidenav md-component-id="skills-details" class="md-sidenav-right" layout="column">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="sidenav.close()">
+        <md-icon>close</md-icon>
+      </md-button>
+      <md-button class="md-icon-button" ng-click="sidenav.close()" ng-if="skill.touched">
+        <md-icon>done</md-icon>
+      </md-button>
+      <span flex>Détail compétence</span>
+    </div>
+  </md-toolbar>
+  <div layout-margin layout="column">
+    <h2 class="md-title">Politique</h2>
+    <!-- <span class="md-subhead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span> -->
+    <div layout="row" layout-align="space-around center">
+        <div flex="20" layout="column" layout-align="center center">
+          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" style="transform: rotate(-90deg)">
+            <g ghr-skills-ratings inner-circle ratings="[50, 25]" outer-color="'#1A237E'" inner-color="'#5C6BC0'"></g>
+          </svg>
+        </div>
+        <div layout="column" layout-align="center center" flex="40">
+          <span class="md-body-2 graph-legend" style="color: #1A237E">Cible métier</span>
+          <span class="md-body-2 graph-legend" style="color: #5C6BC0">Cible révisée</span>
+          <span class="md-body-2 graph-legend" style="color: #00BCD4">Évaluation</span>
+        </div>
+        <div flex="20" layout="column" layout-align="center center">
+          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" style="transform: rotate(-90deg)">
+            <g ghr-skills-ratings ratings="[{{skill.rating * 25}}]" outer-color="'#00BCD4'"></g>
+          </svg>
+        </div>
+    </div>
+    <div layout="row" layout-align="start center" layout-margin>
+      <span class="md-body-2">Évaluation</span>
+      <md-slider flex="90" step="1" min="0" max="4" ng-model="skill.rating" aria-label="Outer values" md-discrete>
+      </md-slider>
+    </div>
+  </div>
+  <md-list flex>
+    <md-subheader class="md-no-sticky">Niveaux</md-subheader>
+    <md-list-item ng-repeat="level in levels">
+      <md-icon class="md-avatar-icon">looks_{{level.cardinal}}</md-icon>
+      <div class="md-list-item-text">
+        <h3>{{level.title}}</h3>
+        <p>{{level.description}}</p>
+      </div>
+      <md-divider md-inset ng-if="!$last"></md-divider>
+    </md-list-item>
+    <div ng-repeat="modality in modalities">
+      <md-subheader class="md-no-sticky">Modalités d'acquisition — {{modality.title}}</md-subheader>
+      <md-list-item ng-repeat="item in modality.items">
+        <div class="md-list-item-text">
+          <p class="md-body-2">{{item.type}} — {{item.label}}<span ng-if="item.reference"> — {{item.reference}}</span></p>
+        </div>
+        <md-divider md-inset ng-if="!$last"></md-divider>
+      </md-list-item>
+    </div>
+  </md-list>
+</md-sidenav>

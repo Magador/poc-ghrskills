@@ -1,0 +1,45 @@
+{
+  "bower_components/w20/w20-core.w20.json": {
+    "modules": {
+      "application": {
+        "id": "poc-ghrskills",
+        "home": "/poc-ghrskills-app/home",
+        "blank": "/blank",
+        "notFound": "/not-found",
+        "redirectAfterRouteError": "/poc-ghrskills-app/home"
+      },
+      "culture": {
+        "available": ["en", "fr"],
+        "default": "fr"
+      },
+      "env": {
+        "type": "DEV"
+      },
+      "security": {
+        "redirectAfterLogin": "/poc-ghrskills-app/home",
+        "autoLogin": false
+      }
+    }
+  },
+  "bower_components/w20-material/w20-material.w20.json": {},
+  "bower_components/w20-material-theme/w20-material-theme.w20.json": {
+    "modules": {
+      "sidenav": {
+        "logoUrl": "/poc-ghrskills-app/home",
+        "logoImg": "poc-ghrskills-app/images/logo.png",
+        "backgroundImg": "poc-ghrskills-app/images/header-background.jpg"
+      },
+      "main": {
+        "theme": {
+          "primaryPalette": {
+            "name": "indigo"
+          },
+          "accentPalette": {
+            "name": "cyan"
+          }
+        }
+      }
+    }
+  },
+  "poc-ghrskills-app/poc-ghrskills-app.w20.json": {}
+}

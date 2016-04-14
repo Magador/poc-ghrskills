@@ -1,0 +1,74 @@
+.people-view .md-button.yammer-button {
+  color: rgb(0, 114, 198);
+}
+
+.people-view .md-button.yammer-button img {
+  height: 14px !important;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+md-card-actions.dense-buttons {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.people-view .md-button.yammer-button img {
+  height: 14px !important;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.md-body-2.graph-legend {
+  font-weight: bold;
+}
+
+/* g[ghr-skills-ratings] {
+  transform: rotate(-90deg);
+  transform-origin: center;
+} */
+
+g[ghr-skills-ratings] circle {
+  transition: stroke-dashoffset 1s ease;
+}
+
+md-list-item .md-avatar-icon.md-avatar-first-letter {
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.skills-mobile-tablet-view .skill-ratings {
+  height: 40px;
+  width: 40px;
+}
+
+.skills-mobile-tablet-view .skill-ratings svg {
+  height: 40px;
+  pointer-events: none;
+}
+
+md-list-item.md-2-line .md-list-item-text h3.micro-skill-title {
+  white-space: normal;
+}
+
+md-card-content.notification-content {
+  padding: 0;
+}
+
+.md-button.notification-button {
+  margin: 0;
+  text-transform: initial;
+  width: 100%;
+  text-align: left;
+}
+
+.md-button.notification-button h3,
+.md-button.notification-button h4 {
+  margin: 8px;
+  white-space: normal;
+}
