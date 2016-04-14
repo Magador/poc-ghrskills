@@ -15,7 +15,7 @@ npm install -g gulp-cli
 NPM will install Bower and Gulp globally, so you can reuse them in other projects !
 
 ```
-git clone -b demo https://github.com/Magador/w20-material-theme.git poc-ghrskills
+git clone https://github.com/Magador/poc-ghrskills.git
 cd poc-ghrskills
 npm install
 bower install
@@ -30,7 +30,7 @@ gulp
 It will serve the app through [`browser-sync`](https://browsersync.io) then open a new tab with the default OS Internet app to [`http://localhost:3000`](http://localhost:3000)
 Each time a `.css`, `.html`, `.js`, `.json` or images change, the tab reloads.
 
-## Changes
+## Changes from [w20-material-theme default app](https://github.com/Magador/w20-material-theme/tree/demo)
 
 ### Changes in order for the default app to run
 
