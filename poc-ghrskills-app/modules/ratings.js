@@ -17,11 +17,14 @@ define([
     function($log) {
       return {
         template: [
+          '<g>',
           '<circle r="18" cx="20" cy="20" fill="none" stroke="#E0E0E0" stroke-width="4"></circle>',
           '<circle r="18" cx="20" cy="20" fill="none" ng-attr-stroke="{{outerColor}}" stroke-width="4" stroke-dasharray="113.1" ng-attr-stroke-dashoffset="{{outerOffset}}"></circle>',
           '<circle r="13" cx="20" cy="20" fill="none" stroke="#E0E0E0" stroke-width="4"></circle>',
-          '<circle r="13" cx="20" cy="20" fill="none" ng-attr-stroke="{{innerColor}}" stroke-width="4" stroke-dasharray="81.68" ng-attr-stroke-dashoffset="{{innerOffset}}"></circle>'
+          '<circle r="13" cx="20" cy="20" fill="none" ng-attr-stroke="{{innerColor}}" stroke-width="4" stroke-dasharray="81.68" ng-attr-stroke-dashoffset="{{innerOffset}}"></circle>',
+          '</g>'
         ].join('\n'),
+        replace: true,
         templateNamespace: 'svg',
         scope: {
           ratings: '@',
@@ -40,7 +43,7 @@ define([
           $log.info(iElement, iElement.children());
           var child = iElement.children()[2];
           if(child)
-            child.remove();
+            angular.element(child).remove();
         }
 
         scope.$watch(function() {
