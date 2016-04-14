@@ -39,7 +39,7 @@ define([
       $scope.$watch(function() {
         return $mdMedia('gt-xs')
       }, function(isDesktop) {
-        $scope.template.url = isDesktop? "/poc-ghrskills-app/views/skills.desktop.html": "/poc-ghrskills-app/views/skills.mobile-tablet.html";
+        $scope.template.url = isDesktop? "poc-ghrskills-app/views/skills.desktop.html": "poc-ghrskills-app/views/skills.mobile-tablet.html";
       });
 
       $scope.microSkills = [
