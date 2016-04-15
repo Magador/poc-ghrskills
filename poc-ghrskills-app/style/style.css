@@ -52,6 +52,15 @@ md-list-item .md-avatar-icon.md-avatar-first-letter {
   pointer-events: none;
 }
 
+.people-view .skill-ratings {
+  width: 75%;
+  text-align: center;
+}
+
+.people-view .skill-ratings svg {
+  min-height: 100px;
+}
+
 md-list-item.md-2-line .md-list-item-text h3.micro-skill-title {
   white-space: normal;
 }

@@ -1,7 +1,7 @@
 <section class="people-view" flex>
   <div flex="none" layout="column" layout-gt-xs="row" layout-align="space-around stretch">
     <div flex flex-gt-xs="66">
-      <md-card flex>
+      <md-card>
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">Pierre Lefevre</span>
@@ -13,7 +13,7 @@
             </div>
           </md-card-title-media>
         </md-card-title>
-        <md-card-content layout="column" flex class="people-details">
+        <md-card-content layout="column" class="people-details">
           <dl class="details-infos">
             <dt class="infos-title md-body-2">Direction / entité</dt>
             <dd class="infos-description md-body-1">DF/DSP/DPAV/PGAS/PAGC</dd>
@@ -37,20 +37,22 @@
       </md-card>
     </div>
     <div flex="100" flex-gt-xs="33" layout="row" layout-gt-xs="column">
-      <md-card flex>
+      <md-card>
         <md-card-title>
           <md-card-title-text>
             <span class="md-title">Complétude</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content flex layout="column" layout-align="start center">
-          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
-            <g ghr-skills-ratings ratings="{{completeness.values}}" outer-color="'#1A237E'"></g>
-          </svg>
+        <md-card-content layout="column" layout-align="start center">
+          <div class="skill-ratings">
+            <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="100%" style="transform: rotate(-90deg)">
+              <g ghr-skills-ratings ratings="{{completeness.values}}" outer-color="'#1A237E'"></g>
+            </svg>
+          </div>
           <p class="md-subhead">{{completeness.values[0]}} / 100</p>
         </md-card-content>
       </md-card>
-      <md-card flex>
+      <md-card>
         <md-card-title>
           <md-card-title-text>
             <span class="md-title">Nb skills, objectifs</span>
@@ -64,16 +66,18 @@
 
   <div layout="row" layout-wrap flex>
     <div flex="50" flex-gt-xs="33" ng-repeat="skill in skills">
-      <md-card flex>
+      <md-card>
         <md-card-title>
           <md-card-title-text>
             <span class="md-title">{{skill.title}}</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content flex layout="column" layout-align="start center">
-          <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="75%" style="transform: rotate(-90deg)">
-            <g ghr-skills-ratings ratings="{{skill.values}}" outer-color="'#1A237E'"></g>
-          </svg>
+        <md-card-content layout="column" layout-align="start center">
+          <div class="skill-ratings">
+            <svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" flex width="100%" style="transform: rotate(-90deg)">
+              <g ghr-skills-ratings ratings="{{skill.values}}" outer-color="'#1A237E'"></g>
+            </svg>
+          </div>
           <p class="md-subhead">{{skill.value}} / {{skill.max}}</p>
         </md-card-content>
         <md-card-actions class="dense-buttons">
